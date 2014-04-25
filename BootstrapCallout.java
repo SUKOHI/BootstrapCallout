@@ -7,6 +7,7 @@ import com.beardedhen.androidbootstrap.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,6 +67,7 @@ public class BootstrapCallout extends FrameLayout {
 		String bootstrapType = "default";
 		String titleText = "";
 		String descriptionText = "";
+		int backgroundColor = Color.WHITE;
 		float titleTextSize = 18.0f;
 		float descriptionTextSize = 14.0f;
 		
@@ -90,6 +92,10 @@ public class BootstrapCallout extends FrameLayout {
 		if(a.getString(R.styleable.BootstrapCallout_bc_description_text_size) != null) {
 			descriptionTextSize = a.getFloat(R.styleable.BootstrapCallout_bc_description_text_size, descriptionTextSize);
 		}
+
+		if(a.getString(R.styleable.BootstrapCallout_bc_background_color) != null) {
+			backgroundColor = a.getColor(R.styleable.BootstrapCallout_bc_background_color, Color.WHITE);
+		}
 		
 		int typeColor = getResources().getColor(typeColorMap.get(bootstrapType));
 		a.recycle();
@@ -108,6 +114,8 @@ public class BootstrapCallout extends FrameLayout {
 		
 		setDescriptionText(descriptionText);
 		setDescriptionTextSize(descriptionTextSize);
+		
+		setBackgroundColor(backgroundColor);
 		
 		addView(calloutView);
 		
@@ -149,10 +157,10 @@ public class BootstrapCallout extends FrameLayout {
 	<com.sukohi.lib.BootstrapCallout
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:background="@color/color"
 		bootstrap:bc_title_text="@string/title"
 		bootstrap:bc_description_text="@string/description"
 		bootstrap:bc_type="success"
+		bootstrap:bc_background_color="@color/color"
 	    android:layout_marginTop="10dp" />
 
 ***/
