@@ -53,7 +53,7 @@
 		<attr name="bc_description_text" format="string"/>
 		<attr name="bc_title_text_size" format="integer"/>
 		<attr name="bc_description_text_size" format="integer"/>
-		<attr name="android:background"/>
+		<attr name="bc_background_color" format="integer"/>
 	</declare-styleable>
     
     <!-- Added by SUKOHI 21 Apr, 2014 -->
@@ -64,5 +64,12 @@
 		<attr name="bh_underline_width" format="integer"/>
 	</declare-styleable>
 	
+    <!-- Added by SUKOHI 21 Apr, 2014 -->
+	<declare-styleable name="FontAwesomeCheckBox">
+		<attr name="fc_type" format="string"/>
+		<attr name="fc_text" format="string"/>
+		<attr name="fc_text_size" format="integer"/>
+		<attr name="fc_checked" format="boolean"/>
+	</declare-styleable>
+	
 </resources>
-
